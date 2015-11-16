@@ -11,6 +11,8 @@ Basic scaffold for build a small library or javascript app.
 
 ## Usage
 
-    wget https://github.com/chemzqm/scaffold/tarball/master
-    tar -zxf master
-    rm master
+``` bash
+wget https://github.com/chemzqm/scaffold/tarball/master
+tar -zxf master
+rm master
+```
