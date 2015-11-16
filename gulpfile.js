@@ -42,7 +42,6 @@ gulp.task('build-dev', ['webpack:build-dev', 'serve'], function () {
 // static server
 gulp.task('serve', serve({
   root: __dirname,
-  // inject livereload script ot html
   middlewares: []
 }))
 
