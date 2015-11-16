@@ -13,7 +13,7 @@ Basic scaffold for build a small library or javascript app.
 
 ```
 { test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader?optional[]=runtime' }
-``
+```
 Add this to loaders in your webpack.config.js and `npm i babel-loader -D`
 
 This would enable some es7 features, most importantly `async` `await`
