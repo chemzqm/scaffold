@@ -2,6 +2,9 @@
 
 Basic scaffold for build a small library or javascript app.
 
+Tips:
+* Use crhome as your default browser, it would send request to the server when it available.
+
 ## Features
 * `make` start a livereload server for example pages with watch for rebuild
 * `make test` start a webpack-dev-server with mocha-loader for live testing
