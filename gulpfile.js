@@ -59,18 +59,19 @@ gulp.task('webpack:build-dev', function (callback) {
 
 gulp.task('webpack:test', function (callback) {
   var entry = [
-    path.join(__dirname, './node_modules/console-polyfill/index.js'),
-    path.join(__dirname, './node_modules/es5-shim/es5-shim.js'),
-    path.join(__dirname, './node_modules/es5-shim/es5-sham.js'),
-    path.join(__dirname, './node_modules/html5shiv/dist/html5shiv.js'),
+    'webpack-dev-server/client?http://localhost:' + port,
+    'webpack/hot/dev-server',
+    'console-polyfill/index.js',
+    'es5-shim/es5-shim.js',
+    'es5-shim/es5-sham.js',
+    'html5shiv/dist/html5shiv.js',
     'mocha!' + testIndex
   ]
 
   var config = Object.create(myConfig)
   config.entry = entry
-  config.entry.unshift('webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server')
-  // webpack need this to send request to webpack-dev-server
   config.plugins = config.plugins || []
+  // webpack need this to send request to webpack-dev-server
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
   // Get line of error in mocha
   config.devtool = 'eval'
