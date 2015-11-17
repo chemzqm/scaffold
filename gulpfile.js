@@ -81,9 +81,7 @@ gulp.task('webpack:test', function (callback) {
   config.module = myConfig.module
   var server = new WebpackDevServer(compiler, {
     publicPath: '/',
-    hot: true,
     inline: true,
-    debug: true,
     historyApiFallback: false,
     stats: { colors: true }
   })
