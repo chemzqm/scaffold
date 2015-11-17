@@ -45,9 +45,9 @@ gulp.task('serve', serve({
   middlewares: []
 }))
 
-var devCompiler = webpack(myConfig)
 
 gulp.task('webpack:build-dev', function (callback) {
+  var devCompiler = webpack(myConfig)
   devCompiler.run(function (err, stats) {
     if (err) throw new gutil.pluginError('webpack:build-dev', err) //eslint-disable-line
     gutil.log('[webpack:build-dev]', stats.toString({
@@ -58,8 +58,16 @@ gulp.task('webpack:build-dev', function (callback) {
 })
 
 gulp.task('webpack:test', function (callback) {
+  var entry = [
+    path.join(__dirname, './node_modules/console-polyfill/index.js'),
+    path.join(__dirname, './node_modules/es5-shim/es5-shim.js'),
+    path.join(__dirname, './node_modules/es5-shim/es5-sham.js'),
+    path.join(__dirname, './node_modules/html5shiv/dist/html5shiv.js'),
+    'mocha!' + testIndex
+  ]
+
   var config = Object.create(myConfig)
-  config.entry = ['mocha!' + testIndex]
+  config.entry = entry
   config.entry.unshift('webpack-dev-server/client?http://localhost:' + port, 'webpack/hot/dev-server')
   // webpack need this to send request to webpack-dev-server
   config.plugins = config.plugins || []
@@ -78,5 +86,5 @@ gulp.task('webpack:test', function (callback) {
     historyApiFallback: false,
     stats: { colors: true }
   })
-  server.listen(port, 'localhost', callback);
+  server.listen(port, 'localhost', callback)
 })
