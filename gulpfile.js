@@ -71,7 +71,7 @@ gulp.task('webpack:test', function (callback) {
   // webpack need this to send request to webpack-dev-server
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
   // Get line of error in mocha
-  config.devtool = 'inline-source-map'
+  config.devtool = 'cheap-module-eval-source-map'
   // must have
   config.output.path = __dirname
   var compiler = webpack(config)
