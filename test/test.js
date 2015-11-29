@@ -1,6 +1,7 @@
 /*global describe, it, beforeEach, afterEach*/
 var assert = require('assert')
-require('..')
+var expect = require('expect')
+var scaffold = require('..')
 
 var el
 beforeEach(function () {
@@ -15,5 +16,13 @@ afterEach(function () {
 describe('works', function() {
   it('should works', function () {
     assert(/can/.test(document.body.textContent))
+  })
+
+  it('should not works', function () {
+    assert(/cani/.test(document.body.textContent))
+  })
+
+  it('should not works two', function () {
+    scaffold.test()
   })
 })

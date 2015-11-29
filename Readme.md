@@ -1,6 +1,6 @@
 # Scaffold
 
-Basic scaffold for build a small library or javascript app.
+Nothing in here doesn't have a reason to be.
 
 ## Features
 * `make` start a livereload server for example pages with watch for rebuild

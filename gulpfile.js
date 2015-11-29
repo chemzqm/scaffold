@@ -59,13 +59,10 @@ gulp.task('webpack:build-dev', function (callback) {
 
 gulp.task('webpack:test', function (callback) {
   var entry = [
+    'stack-source-map/index.js',
     'webpack-dev-server/client?http://localhost:' + port,
     'webpack/hot/dev-server',
-    'console-polyfill/index.js',
-    'es5-shim/es5-shim.js',
-    'es5-shim/es5-sham.js',
-    'html5shiv/dist/html5shiv.js',
-    'mocha!' + testIndex
+    'mocha-notify!' + testIndex
   ]
 
   var config = Object.create(myConfig)
@@ -74,7 +71,7 @@ gulp.task('webpack:test', function (callback) {
   // webpack need this to send request to webpack-dev-server
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
   // Get line of error in mocha
-  config.devtool = 'eval'
+  config.devtool = 'inline-source-map'
   // must have
   config.output.path = __dirname
   var compiler = webpack(config)

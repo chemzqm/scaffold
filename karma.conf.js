@@ -65,7 +65,7 @@ module.exports = function(config) {
     browsers: ['Firefox'],
 
     webpack: {
-      devtool: 'eval',
+      devtool: 'eval-source-map',
       module: webpack.module
     },
 
