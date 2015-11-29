@@ -59,7 +59,7 @@ gulp.task('webpack:build-dev', function (callback) {
 
 gulp.task('webpack:test', function (callback) {
   var entry = [
-    'stack-source-map/index.js',
+    'stack-source-map/register.js',
     'webpack-dev-server/client?http://localhost:' + port,
     'webpack/hot/dev-server',
     'mocha-notify!' + testIndex
