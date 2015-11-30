@@ -18,6 +18,8 @@ Add this to loaders in your webpack.config.js and `npm i babel-loader -D`
 
 This would enable some es7 features, most importantly `async` `await`
 
+**in babel 6, this not works any more**
+
 ## FAQ
 
 **Q**: Why not build a tool?
