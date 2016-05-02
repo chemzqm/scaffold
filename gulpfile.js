@@ -13,13 +13,13 @@ var testIndex = './test/test.js'
 var port = 8080
 // no conflict
 var myConfig = Object.assign({}, config, {
-  devtool: 'sourcemap',
+  devtool: 'cheap-module-eval-source-map',
   debug: true
 })
 
 var paths = {
   // file list for webpack build
-  scripts: ['lib/index.js', 'example/index.js'],
+  scripts: ['style.scss', 'index.js', 'example/index.js'],
   // file list for reload
   asserts: ['example/bundle.js', 'example/*.css', 'example/index.html']
 }

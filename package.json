@@ -1,8 +1,8 @@
 {
-  "name": "component-scaffold",
+  "name": "scaffold",
   "version": "0.0.1",
   "description": "",
-  "main": "lib/index.js",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -51,6 +51,9 @@
     "webpack": "^1.12.6",
     "webpack-dev-server": "^1.12.1"
   },
-  "dependencies": {},
-  "browser": {}
+  "dependencies": {
+    "sass-loader": "^3.2.0"
+  },
+  "browser": {},
+  "style": "style.css"
 }

@@ -6,6 +6,7 @@ module.exports = {
   },
   module: {
     loaders: [
+      {test: /\.scss/, loader: 'style!css!sass'}
       {test: /\.css$/, loader: 'style!css'},
       {test: /\.png$/, loader: 'url-loader?mimetype=image/png'},
       {test: /\.json$/, loader: 'json' },
