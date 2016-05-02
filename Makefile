@@ -1,5 +1,5 @@
 build:
-	@open http://localhost:3000/example/index.html
+	@chrome http://localhost:3000/example/index.html
 	@gulp
 
 test:
@@ -13,6 +13,10 @@ test-coveralls:
 	@echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
 	@node_modules/.bin/karma start --single-run && \
 		cat ./coverage/lcov/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+
+prepublish:
+	@babel src -d dest
+	@scss style.scss:style.css --sourcemap=none
 
 doc:
 	@ghp-import example -n -p
