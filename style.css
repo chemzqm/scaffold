@@ -1,3 +1,21 @@
+:root {
+  --lineHeight: 1.5;
+  --baseColor: rgba(220, 15, 210, 0.5);
+}
+
 body {
-  display: flex;
-  height: 80px; }
+  font-size: 18px;
+  line-height: calc(--lineHeight*2);
+  & a{
+    color: #fff;
+  }
+}
+
+p:matches(:first-child, .special) {
+  color: red;
+}
+
+p:not(:first-child, .special) {
+  color: red;
+  background-color: color(var(--baseColor) blackness(+10%));
+}

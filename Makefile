@@ -16,7 +16,7 @@ test-coveralls:
 
 prepublish:
 	@babel src -d dest
-	@scss style.scss:style.css --sourcemap=none
+	@postcss --use postcss-cssnext -o dest/style.css style.css
 
 doc:
 	@ghp-import example -n -p

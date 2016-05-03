@@ -1,4 +1,4 @@
-var autoprefixer = require('autoprefixer')
+var cssnext = require('postcss-cssnext')
 
 module.exports = {
   entry: './example/index.js',
@@ -9,13 +9,12 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.jsx?$/, exclude: /(node_modules|dist)/, loader: 'babel', query: { presets: ['es2015']}},
-      {test: /\.scss/, loader: 'style!css!sass!postcss'},
       {test: /\.css$/, loader: 'style!css!postcss'},
       {test: /\.png$/, loader: 'url-loader?mimetype=image/png'},
       {test: /\.json$/, loader: 'json' },
       {test: /\.html$/, loader: 'html'}
     ]
   },
-  postcss: [ autoprefixer({ browsers: ['last 2 versions'] }) ],
+  postcss: [cssnext()],
   plugins: []
 }

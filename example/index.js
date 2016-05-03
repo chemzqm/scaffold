@@ -1,4 +1,5 @@
-require('../style.scss')
+require('./style.css')
+require('../style.css')
 import Mod from '../src/index'
 
 var m = new Mod()
