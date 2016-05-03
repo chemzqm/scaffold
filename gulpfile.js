@@ -14,6 +14,7 @@ var port = 8080
 // no conflict
 var myConfig = Object.assign({}, config, {
   devtool: 'cheap-module-eval-source-map',
+  cache: true,
   debug: true
 })
 
@@ -70,8 +71,6 @@ gulp.task('webpack:test', function (callback) {
   config.plugins = config.plugins || []
   // webpack need this to send request to webpack-dev-server
   config.plugins.push(new webpack.HotModuleReplacementPlugin())
-  // Get line of error in mocha
-  config.devtool = 'cheap-module-eval-source-map'
   // must have
   config.output.path = __dirname
   var compiler = webpack(config)

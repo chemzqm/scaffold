@@ -1,19 +1,24 @@
 /*global describe, it, beforeEach, afterEach*/
-var assert = require('assert')
-var scaffold = require('..')
+'use strict'
+import assert from 'assert'
+import Mod from '../src'
 
-var el
-beforeEach(function () {
+const PI = Math.PI
+
+let el
+beforeEach(() => {
   el = document.createElement('div')
   document.body.appendChild(el)
 })
 
-afterEach(function () {
+afterEach(() => {
   document.body.removeChild(el)
 })
 
 describe('works', function() {
   it('should works', function () {
-    assert(/can/.test(document.body.textContent))
+    var m = new Mod()
+    console.log(PI)
+    assert.equal(1, 1)
   })
 })

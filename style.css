@@ -5,10 +5,9 @@
 
 body {
   font-size: 18px;
-  line-height: calc(--lineHeight*2);
-  & a{
-    color: #fff;
-  }
+  line-height: calc(var(--lineHeight)*2);
+  height: 100px;
+  background-color: yellow;
 }
 
 p:matches(:first-child, .special) {
