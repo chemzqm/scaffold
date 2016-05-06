@@ -20,7 +20,7 @@ var myConfig = Object.assign({}, config, {
 
 var paths = {
   // file list for webpack build
-  scripts: ['style.css', 'example/style.css', 'index.js', 'example/index.js'],
+  scripts: ['style.css', 'example/style.css', 'src/*.js', 'src/*.html', 'example/index.js'],
   // file list for reload
   asserts: ['example/bundle.js', 'example/index.html']
 }

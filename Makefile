@@ -21,4 +21,7 @@ prepublish:
 doc:
 	@ghp-import example -n -p
 
+tags:
+	@jsctags src/*.js example/index.js -f > tags
+
 .PHONY: test

@@ -7,5 +7,7 @@ m.on('x', () => {
   console.log('called')
 })
 m.x()
-console.log(22)
 
+function abc() {
+  
+}
