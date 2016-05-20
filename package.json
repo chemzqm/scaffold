@@ -63,10 +63,7 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
-    "component-emitter": "^1.2.1"
   },
   "browser": {
-    "emitter": "component-emitter"
-  },
-  "style": "style.css"
+  }
 }
