@@ -8,6 +8,7 @@ module.exports = {
   },
   module: {
     loaders: [
+      {test: /\.svg/, loader: 'svg-url-loader'},
       {test: /\.jsx?$/, exclude: /(node_modules|dist)/, loader: 'babel', query: { presets: ['es2015']}},
       {test: /\.css$/, loader: 'style!css!postcss'},
       {test: /\.png$/, loader: 'url-loader?mimetype=image/png'},
