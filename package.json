@@ -59,7 +59,7 @@
     "svg-loader": "0.0.2",
     "svg-url-loader": "^1.0.3",
     "url-loader": "^0.5.6",
-    "webpack": "^1.12.6",
+    "webpack": "^1.12.14",
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
