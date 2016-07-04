@@ -33,7 +33,7 @@
     "coveralls": "^2.11.4",
     "css-loader": "^0.23.0",
     "file-loader": "^0.8.5",
-    "growl": "^1.8.1",
+    "growl": "^1.9.2",
     "gulp": "^3.9.0",
     "gulp-live-serve": "^1.0.0",
     "gulp-livereload": "^3.8.1",
